@@ -1,0 +1,8 @@
+body {
+    background:
+      linear-gradient(
+      rgba(223, 98, 98, 0.836),
+      rgba(246,247,249,0.8)),
+      url(pdvsa.png) repeat center center;
+    background-size: small;
+  }

@@ -1,0 +1,25 @@
+<head>
+  <link rel=stylesheet href="{{ url_for('static', filename='Loginestilo.css') }}">
+  <script src="LoginJ.js"></script>
+  <title>Inicio de sesion</title>
+</head>
+<div class="container">
+  <div class="frame">
+    <div class="nav">
+      <ul class="links">
+        <li class="signin-active"><a class="btn">INICIO DE SESION</a></li>
+        <li class="signin-inactive"><a class="btn">PDVSA</a></li>
+      </ul>
+      <a href="Login.html"></a>
+    </div>
+    <div ng-app ng-init="checked = false">
+		<form class="form-signin" action="/Login" method="POST" name="form">
+        <label for="username">Usuario</label>
+        <input class="form-styling" type="text" name="usuario" placeholder="" required>
+        <label for="password">Contraseña</label>
+        <input class="form-styling" type="text" name="password" placeholder="" required/>
+        <input type="checkbox" id="checkbox"/>
+        <label for="checkbox" ><span class="ui"></span>Mantén sesión en este equipo</label>
+        <button type="submit" href="{{ url_for('Inicio') }}" class="btn-animate"> Ingresar </button>
+		</form>
+ </div>

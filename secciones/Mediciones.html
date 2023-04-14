@@ -1,0 +1,73 @@
+<div id="login">
+    <head>
+        <title>Informe de medición</title>
+    </head>
+    <link rel=stylesheet href="{{ url_for('static', filename='Medicionesestilo.css') }}">
+  <form id="login_form" action="/AddMedicion" method="POST">
+
+        <div>
+         
+         <a class="text"><b>PDVSA</b></a>
+         
+        </div>
+<br><br>
+    <div class="field_container">
+       <label for="text"> <b>Informe de medición</b> <br>
+        </label> 
+        </div>
+<br>
+      <div class="field_container">
+        <label for="text">Zona/Oficina:</label>
+      </div>   
+
+      <div class="field_container">
+        <input type="text" placeholder="" name="zona">
+      </div>
+
+      <div class="field_container">
+        <label for="text">Fecha:</label>
+      </div>   
+
+      <div class="field_container">
+        <input type="date" placeholder="" name="fecha">
+      </div>
+
+      <div class="field_container">
+        <label for="text">Hora:</label>
+      </div>   
+
+      <div class="field_container">
+        <input type="time" placeholder="" name="hora">
+      </div>
+
+      <div class="field_container">
+        <label for="text">Nro. de pozo:</label> 
+       </div>
+     
+      <div class="field_container">
+       <input type="text" placeholder="" name="pozo"> 
+      </div>
+    
+      <div class="field_container">
+        <label for="text">Nro.válvula:</label>
+      </div>
+
+      <div class="field_container">
+        <input type="text" placeholder="" name="valvula">
+      </div>
+
+      <div class="field_container">
+        <label for="text">Medición obtenida:</label>
+      </div>
+
+      <div class="field_container">
+        <input type="text" placeholder="" name="medicion">  
+      </div>
+
+      <div class="field_container">
+        <button id="sign_in_button" type="submit">
+       <span class="button_text"> <a href="{{ url_for('Inicio') }}" style="color: white" type="submit">Enviar Informe</a> </span>
+      </button>
+  </form>
+    </div>
+  </div>

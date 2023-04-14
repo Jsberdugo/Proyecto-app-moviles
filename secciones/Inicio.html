@@ -1,0 +1,27 @@
+<head>
+  <link rel=stylesheet href="{{ url_for('static', filename='Loginestilo.css') }}">
+  <title>Menú principal</title>
+</header>
+<div class="container">
+  <div class="frame">
+    <div class="nav">
+      <ul class="links">
+        <li class="signin-active"><a class="btn">MENÚ PRINCIPAL</a></li>
+        <li class="signin-inactive"><a class="btn">PDVSA</a></li>
+      </ul>
+      <a href="Login.html"></a>
+    </div>
+    <div ng-app ng-init="checked = false">
+		<form class="form-signin" action="" method="post" name="form">
+          <div>
+            <a href="{{ url_for('Mediciones') }}" class="btn-animate"> Realizar un informe de medición </a>
+          </div>
+          <br><br><br><br>
+          <div>
+            <a href="{{ url_for('Historial') }}" class="btn-animate"> Observar historial de mediciones </a>
+          </div>
+		</form>
+    <div>
+      <a href="{{ url_for('LoginScreen') }}" class="btn-animate" style="color:white"> Cerrar Sesión </a>
+  </div>
+ </div>

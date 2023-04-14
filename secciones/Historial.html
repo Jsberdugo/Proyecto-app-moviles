@@ -1,0 +1,51 @@
+<div id="login">
+    <head>
+        <title>Historial</title>
+    </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Medicionesestilo.css') }}">
+    <script src="GraficasJ.js"></script>
+        <div>
+         <a class="text"><b>PDVSA</b></a>
+        </div>
+<br><br>
+    <div class="field_container">
+       <label for="text"> <b>Historial de mediciones</b> <br></label> 
+    </div>
+<div class="contenedor">
+    <table class="table">
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">Zona</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Hora</th>
+          <th scope="col">Pozo</th>
+          <th scope="col">Valvula</th>
+          <th scope="col">Medicion (PSI)</th>
+        </thead>
+        <tbody>
+        {% for e in data %}
+            <tr>
+                <td>{{e.ID_medicion}}</td>
+                <td>{{e.zona}}</td>
+                <td>{{e.fecha}}</td>
+                <td>{{e.hora}}</td>
+                <td>{{e.pozo}}</td>
+                <td>{{e.valvula}}</td>
+                <td>{{e.medicion}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br>
+
+<div >
+    <a href="Graficas.html" class="btn-animate" style="color: #b12323e1"> <b>Graficar mediciones</b>  </a>
+</div>
+
+<br>
+
+<div>
+    <a href="Inicio.html" class="btn-animate"style="color: #b12323e1"> <b>Menú principal</b>   </a>
+</div>
+  </div>
